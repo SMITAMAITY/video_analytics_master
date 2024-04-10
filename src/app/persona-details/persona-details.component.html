@@ -1,0 +1,173 @@
+<div class="flex flex-column flex-auto">
+    <!--<div class=" ml-6 surface-card shadow-2 p-3 border-1 border-50 border-round" style="background-image: linear-gradient(45deg, whitesmoke, aliceblue);">
+        <header-layout></header-layout>
+      </div>-->
+    <div class="ml-6 surface-card shadow-2 p-3 border-1 border-50 border-round"
+        style="background-image: linear-gradient(45deg, whitesmoke, aliceblue);">
+        <div class="">
+            <div class="row">
+                <div class="col pl-0 pr-0 pt-0">
+                    <div class="m-0 surface-card shadow-2 border p-3 flex-auto"
+                        style="background-image: linear-gradient(45deg, #6366F1, #6366F1);">
+                        <span class="text-100 font-medium text-3xl font-bold">Kathryn Murphy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid mt-2">
+                <div class="col-12 lg:col-3 xl:col-3 ml-3">
+                    <div class="mb-2 flex">
+                        <div class="  surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span style="height: 40vh;">
+                                    <img  src="/assets/icons/sampleprofilepic.avif" size="xlarge" style="width:250px"/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 flex">
+                        <div class="surface-card shadow-2 border-round p-1 flex-auto">
+                            <div class="flex mb-3">
+                                <span class="p-0" style="font-style: italic; text-align: center;">{{personalQu}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 flex">
+                        <div class="surface-card shadow-2 border-1 border-round p-1 flex-auto">
+                            <div class="flex">
+                                <ul class="list-none p-3 m-0">
+                                    <li class="p-1" *ngFor="let item of userDetails">
+                                        <span
+                                            class="text text-blue-900 inline-flex justify-content-between align-items-center">
+                                            {{item.Label}} : </span>
+                                        <span style=" font-weight: 600; color: #6366F1;">
+                                            {{item.value}}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 flex">
+                        <div class="  surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="text-xl text-blue-600 font-medium font-semibold">Personality</span>
+                            </div>
+                            <div class="flex gap-2 mb-3 relative align-content-end flex-wrap" >
+                                <span *ngFor="let item of personalityList">
+                                    <p-chip [label]="item.category"></p-chip>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 lg:col-3 xl:col-4" style="width: 39.3333%">
+                    <div class="mb-2 flex">
+                        <div class="ml-1 surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="text-xl text-blue-600 font-medium font-semibold">Bio</span>
+                            </div>
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="p-0" style="line-height: 1.5;">{{bio}}</span>
+                                <!-- <br/>
+                                <span class="p-0" style="text-align: justify;">{{bio}}</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 flex">
+                        <div class="ml-1 surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="text-xl text-blue-600 font-medium font-semibold">Goals</span>
+                            </div>
+                            <div class="flex mb-3 relative align-content-end">
+                                <ul class="list-none pl-2">
+                                    <li class="p-1 mb-3 flex align-items-start" *ngFor="let item of listofGoals">
+                                        <i class="pi pi-circle-fill"
+                                            style=" margin-top: 5px; font-size: 10px;color:#6366F1"></i>
+                                        <span class="ml-3">
+                                            {{item}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 flex">
+                        <div class="ml-1 surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="text-xl text-blue-600 font-medium font-semibold">Frustrations</span>
+                            </div>
+                            <div class="flex mb-3 relative align-content-end">
+                                <ul class="list-none pl-2">
+                                    <li class="p-1 mb-3 flex align-items-start" *ngFor="let item of listofFru">
+                                        <i class="pi pi-circle-fill"
+                                            style=" margin-top: 5px; font-size: 10px;color:#6366F1"></i>
+                                        <span class="ml-3">
+                                            {{item}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 lg:col-3 xl:col-4">
+                    <div class="mb-2 flex">
+                        <div class="ml-1 surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="text-xl text-blue-600 font-medium font-semibold">Motivation</span>
+                            </div>
+                            <div class="flex mb-3 relative align-content-end">
+                                <ul class="list-none p-0 m-0 w-full">
+                                    <li class="mb-5" *ngFor="let item of motivationList">
+
+                                        <span class="text-900 inline-flex justify-content-between align-items-center">
+                                            <span class="font-semibold text-900">{{item.Label}}</span>
+                                        </span>
+                                        <div class="surface-300 w-full mt-2" style="height: 7px; border-radius: 4px;">
+                                            <p-progressBar [value]="item.score"></p-progressBar>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="mb-2 flex">
+                        <div class="ml-1 surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="text-xl text-blue-600 font-medium font-semibold">Influencers</span>
+                            </div>
+                            <div class="flex mb-3 relative align-content-end" *ngFor="let item of InfList">
+                                <span class="flex gap-2 flex-wrap">
+                                    <p-avatar [label]="item.Val" styleClass="mr-2" size="xlarge"
+                                        shape="circle"></p-avatar>
+                                    <span
+                                        class="text text-blue-900 inline-flex justify-content-between align-items-center">
+                                        {{item.name}} </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 flex">
+                        <div class="ml-1 surface-card shadow-2 border-round p-3 flex-auto">
+                            <div class="flex mb-3 relative align-content-end">
+                                <span class="text-xl text-blue-600 font-medium font-semibold">Preferred Channels</span>
+                            </div>
+                            <div class="flex mb-3 relative align-content-end">
+                                <ul class="list-none p-0 m-0 w-full">
+                                    <li class="mb-5" *ngFor="let item of channelList">
+                                        <span class="text-900 inline-flex justify-content-between align-items-center">
+                                            <span class="font-semibold text-900">{{item.category}}</span>
+                                        </span>
+                                        <div class="surface-300 w-full mt-2" style="height: 7px; border-radius: 4px;">
+                                            <p-progressBar [value]="item.score"></p-progressBar>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

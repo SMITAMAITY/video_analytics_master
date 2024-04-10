@@ -1,0 +1,30 @@
+<div class="flex flex-column flex-auto vertical-align-middle" style="padding:10%">
+  
+  <div class=" ml-6 surface-card shadow-2 p-3 border-1 border-50 border-round" style="background-image: linear-gradient(45deg, whitesmoke, aliceblue);">
+    <h2 class="p-2">Search for Client Meetings</h2>
+    <div class="card ">
+      <div class="grid" style="align-items:self-end">
+        <div class="col-12 lg:col-6 xl:col-4">
+          <span>
+            <label>Search by Client</label>
+            <br />
+            <p-autoComplete [(ngModel)]="selectedItem" [suggestions]="suggestions" (completeMethod)="search($event)" [style]="{width:'100%', 'margin-top':'10px'}"></p-autoComplete>
+          </span>
+        </div>
+        <div class="col-12 lg:col-6 xl:col-2">
+          <label>Dates From</label>
+          <br />
+          <input class="mt-2" style="height:2.4rem;width:100%" type="date" />
+        </div>
+        <div class="col-12 lg:col-6 xl:col-2">
+          <label>Dates Till</label>
+          <br />
+          <input class="mt-2" style="height:2.4rem;width:100%" type="date" />
+        </div>
+        <div class="col-12 lg:col-6 xl:col-4">
+          <p-button class="w-12" label="Search" icon="pi pi-search" (click)="navigateToDashboard()"></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+:host ::ng-deep p-autocomplete input {
+  width: 100%
+}
+
+label{
+    font-weight:700
+}

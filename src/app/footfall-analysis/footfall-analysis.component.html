@@ -1,0 +1,178 @@
+<div class="container">
+<div class="left-panel col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="filter-data">
+            <span class="filters-title">Filters</span>
+            <span class="clear-all-btn">Clear All</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul>
+            <div class="filter-category">
+                <h5>Feed Category</h5>
+                  <div>
+                      <span><input type="checkbox" id="branchCheckbox" value="branch" checked></span>
+                      <span><label for="branchCheckbox" class="checkbox-label">Branch</label></span>
+                  </div>
+                    <div>
+                      <span><input type="checkbox" id="atmsCheckbox" value="atms"></span>
+                      <span><label for="atmsCheckbox" class="checkbox-label">ATMS</label></span>
+                    </div>
+                   <div>
+                      <span><input type="checkbox" id="doohCheckbox" value="dooh"></span>
+                      <span><label for="doohCheckbox" class="checkbox-label">DOOH</label></span>
+                   </div>
+              </div>
+        </ul>
+        <hr/>
+        <ul>
+            <div class="demographic">
+                <h5>Demography</h5>
+                <div class="dropdown">
+                    <div class="dropdown-group selectWrapper">
+                      <select class="form-select selectBox" id="stateSelect">
+                        <option value="">State</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="telangana">Telangana</option>
+                        <option value="maharashtra">Maharashtra</option>
+                      </select>
+                      </div>
+                      <div class="dropdown-group selectWrapper">
+                      <select class="form-select selectBox" id="citySelect">
+                        <option value="">City</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="noida">Noida</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="chennai">Chennai</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-group selectWrapper">
+                      <select class="form-select selectBox" id="branchSelect">
+                        <option value="">Branch</option>
+                        <option value="Axis">Axis</option>
+                        <option value="BOI">BOI</option>
+                        <option value="HDFC">HDFC</option>
+                        <option value="SBI">SBI</option>>
+                      </select>
+                    </div>
+                  </div>
+                  
+            </div>
+        </ul>
+        
+        <hr/>
+        <ul>
+            <div class="date-time">
+                <h5>Date Time</h5>
+                <input class="date"  type="datetime-local" id="dateRangeFromTo">
+                <div>
+                    <span>
+                        <input type="time" id="fromTime" value="fromTime">  
+                    </span>
+                    <span>
+                        <input type="time" id="toTime" value="toTime">
+                    </span>
+                </div>
+                <div class="time-sbuttonder">
+                    <input type=range min=fromTime max=toTime  class=sbuttonder id=myRange 
+                    min="10" max="100">
+                </div>
+
+                
+                  
+            </div>
+        </ul>
+        <hr/>
+        <ul>
+          
+            <div class="traffic">
+                <h5>Traffic
+                    <span>(250)</span>
+                </h5> 
+                <div class="progress-bars">
+                    <div class="progress-bar red" data-progress="30%">
+                      <div class="progress red-progress" style="width: 30%;" value="30">
+                    </div>
+                    </div>
+                    <div class="progress-bar yellow" data-progress="60%">
+                      <div class="progress yellow-progress" style="width: 60%;" value="60">
+                    </div>
+                    </div>
+                    <div class="progress-bar green" data-progress="90%">
+                      <div class="progress green-progress" style="width: 90%;" value="90">
+                    
+                    </div>
+                    </div>
+                  </div>
+            </div>
+                  
+        </ul>
+       
+      </div>
+    </div>
+  </div>
+  <div class="right-panel col-md-8">
+    <div class="card">
+        <div class="card-header">
+            <div class="rightPanel">
+                <span class="product Items"><span style="font-weight: bold;">300</span> products</span>
+                <span class="sortItems">
+                   <select class="form-select selectBox sort" id="sortFeature">
+                       <option value="">Sort by featured</option>
+                   </select>
+               </span>  
+            </div>
+       
+        <div class="items">
+                <button>Branch<span class="close">&times;</span></button>
+                <button>NEWYORK<span class="close">&times;</span></button>
+                <button>Fulton Street<span class="close">&times;</span></button>
+                <span class="clear-all-btn">Clear All</span>
+        </div>
+    </div>
+    <div class="card-body">
+        <div>
+        <span>
+            <h3>Video 1</h3>
+           <span style="display:flex; justify-content: space-between; margin-right: 10px;">
+            <video width="45%" height="400px" src="assets/videos/intro.mp4" controls style="border:solid 1px lightblue; margin-right:15px"></video>
+            <em>Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+                Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+                Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+            </em>
+           </span>
+            <canvasjs-chart [options]="chartOptionsFootfall" [styles]="{width: '100%', height:'150px'}" controls style="border:solid 1px lightblue;margin-top:5rem"></canvasjs-chart>
+            <canvasjs-chart [options]="chartOptionsQueueLength" [styles]="{width: '100%', height:'150px'}" controls style="border:solid 1px lightblue;margin-top:5rem"></canvasjs-chart>
+        </span>
+        <span>
+            <h3>Video 2</h3>
+           <span style="display:flex; justify-content: space-between; margin-right: 10px;">
+            <video width="45%" height="400px" src="assets/videos/intro.mp4" controls style="border:solid 1px lightblue; margin-right:15px"></video>
+            <em>Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+                Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+                Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+            </em>
+           </span>
+            <canvasjs-chart [options]="chartOptionsFootfall" [styles]="{width: '100%', height:'150px'}" controls style="border:solid 1px lightblue;margin-top:5rem"></canvasjs-chart>
+            <canvasjs-chart [options]="chartOptionsQueueLength" [styles]="{width: '100%', height:'150px'}" controls style="border:solid 1px lightblue;margin-top:5rem"></canvasjs-chart>
+        </span>
+        <span>
+            <h3>Video 3</h3>
+           <span style="display:flex; justify-content: space-between; margin-right: 10px;">
+            <video width="45%" height="400px" src="assets/videos/Conversation_1.mp4" controls style="border:solid 1px lightblue; margin-right:15px"></video>
+            <em>Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+                Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+                Descriptions tell the YouTube algorithm and your viewers what the video is about. You can think about the description as two parts - what viewers see before clicking “Show more” on desktop or “more” on mobile and what they see after.
+            </em>
+           </span>
+            <canvasjs-chart [options]="chartOptionsFootfall" [styles]="{width: '100%', height:'150px'}" controls style="border:solid 1px lightblue;margin-top:5rem"></canvasjs-chart>
+            <canvasjs-chart [options]="chartOptionsQueueLength" [styles]="{width: '100%', height:'150px'}" controls style="border:solid 1px lightblue;margin-top:5rem"></canvasjs-chart>
+        </span>
+        </div>
+        <button class="getInsights" (click)="onClickBtn()">Get More Insights</button>
+    </div>
+    </div>
+</div>
+</div>

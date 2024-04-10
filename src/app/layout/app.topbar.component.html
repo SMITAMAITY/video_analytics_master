@@ -1,0 +1,43 @@
+<div class="layout-topbar" style="background-color:black">
+  <a class="layout-topbar-logo p-1" [routerLink]="">
+    <img src="assets/layout/images/analytics.png" alt="logo" style="margin-top: 1rem">
+    <h1 style="font-weight:bolder;margin-top:1rem;color:white;margin-left:1rem">EIVA</h1>
+    <h2 style="font-weight: bolder; position: absolute; margin-top: 5rem; margin-left: 4rem; color: white">Enterprise Intelligent Video Analytics</h2>
+  </a>
+
+  <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="layoutService.showProfileSidebar()">
+    <i class="pi pi-ellipsis-v"></i>
+  </button>
+
+  <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+    <button class="p-link layout-topbar-button">
+      <i class="pi pi-calendar"></i>
+      <span>Calendar</span>
+    </button>
+    <button class="p-link layout-topbar-button">
+      <i class="pi pi-user"></i>
+      <span>Profile</span>
+    </button>
+    <button class="p-link layout-topbar-button" [routerLink]="'/documentation'">
+      <i class="pi pi-cog"></i>
+      <span>Settings</span>
+    </button>
+  </div>
+</div>
+<!--<div class="flex">
+  <p-megaMenu [model]="items" styleClass="flex">
+    <ng-template pTemplate="end">
+      <p-inputGroup class="align-self-end flex" >
+        <input type="text" pInputText placeholder="Search" style="width: 30rem"/>
+        <button type="button" pButton icon="pi pi-search" class="p-button-primary" style="width:3rem"></button>
+      </p-inputGroup>
+    </ng-template>
+  </p-megaMenu>
+</div>-->
+
+<style>
+  :host ::ng-deep
+  p-megaMenu {
+    width: 100%
+  }
+</style>

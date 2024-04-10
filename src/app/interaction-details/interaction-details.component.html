@@ -1,0 +1,266 @@
+<div class="flex flex-column flex-auto">
+  <div class=" ml-6 surface-card shadow-2 p-3 border-1 border-50 border-round" style="background-image: linear-gradient(45deg, whitesmoke, aliceblue);">
+    <header-layout></header-layout>
+  </div>
+
+  <div class="grid ml-6 mt-3 shadow-1">
+    <div class="col-12 lg:col-2 xl:col-2  border-round">
+      <span class="flex align-items-center mb-3">
+        <i class="pi pi-users" style="font-size: 2rem;color:blueviolet"></i>
+        <span class="text-xl text-900 font-medium font-semibold ml-3">Participants:</span>
+      </span>
+      <label style="font-weight: bold; text-decoration: underline;">Customer:</label>
+      <span class="flex align-items-center">
+        <img src="/assets/icons/sampleprofilepic.avif" style="width:10rem;height:10rem" />
+        <span class="p-3 font-bold"><a [routerLink]="['/personal-details']">Abdul Shaik</a></span>
+      </span>
+      <label style="font-weight: bold;  text-decoration: underline;">Agent:</label>
+      <span class="flex align-items-center">
+        <img src="/assets/icons/sampleprofilepic.avif" style="width:10rem;height:10rem" />
+        <span class="p-3 font-bold"><a href="#">Jacob Jones</a></span>
+      </span>
+    </div>
+    <div class="col-12 lg:col-5 xl:col-5  border-round">
+      <video width="720" height="360" controls style="width:100%;border:solid 1px lightblue">
+        <source src="/assets/videos/Conversation_1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-12 lg:col-5 xl:col-5  border-round">
+      <div class="flex align-items-center">
+        <i class="pi pi-comments" style="font-size: 2rem;color:blueviolet"></i>
+        <span class="text-xl text-900 font-medium font-semibold ml-3 p-3">Transcript:</span>
+      </div>
+      <p-scrollPanel [style]="{ width: '100%', height: '320px' }">
+        <p-table [value]="transcripts" [tableStyle]="{ 'min-width': '50rem' }">
+          <ng-template pTemplate="body" let-transcript>
+            <tr>
+              <td style="width:30px">{{ transcript.time }}</td>
+              <td style="width:70px">{{ transcript.speaker }}</td>
+              <td>{{ transcript.text }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-scrollPanel>
+    </div>
+  </div>
+  
+  
+
+  
+
+  <div class="grid ml-6 mt-3">
+    <div class="col-12 lg:col-8 xl:col-8  border-round">
+      <div class="border-round p-3">
+        <div class="flex align-items-center">
+          <i class="pi pi-list" style="font-size: 2rem;color:blueviolet"></i>
+          <span class="text-xl text-900 font-medium font-semibold ml-3 p-3">Meeting Summary:</span>
+        </div>
+
+        <div class="surface-card shadow-2 border-1 border-50 border-round p-3" style="background-image: linear-gradient(45deg, whitesmoke, aliceblue);">
+          <div class="surface-section p-1">
+            <!--<ul class="p-1" style="list-style-type:none">
+              <li *ngFor="let item of meetingSummary" class="p-3 flex align-items-start">
+                <i class="pi pi-eye" style="font-size: 1.5rem;color:blueviolet"></i>
+                <span class="ml-3" style="font-style: italic; font-weight: 600; text-align: justify;">{{item}}</span>
+              </li>
+            </ul>-->
+            <p-panel header="Objective" class="p-2">
+              <p>
+                Abdul aims to minimize her tax liability as the tax season approaches.
+              </p>
+            </p-panel>
+            <p-panel header="Initial Steps:" class="p-2">
+              <p>
+                Jacob recommends reviewing Abdul’s current financial situation and tax profile.
+                Abdul provides details about her income, sources, investments, deductions, and credits.
+              </p>
+            </p-panel>
+            <p-panel header="Strategies Proposed by Jacob:" class="p-2">
+              <ul>
+                <li>
+                  <b>Maximizing Contributions:</b> Jacob suggests maximizing contributions to tax-advantaged retirement accounts like 401(k) or IRA. This helps reduce taxable income and lower the tax bill.
+                  Tax Loss Harvesting: Another strategy involves selling investments that have experienced a loss to offset capital gains and reduce tax liability.
+                </li>
+                <li>
+                  <b>Ongoing Monitoring:</b>
+                  Jacob will monitor Abdul’s investment portfolio throughout the year, identifying opportunities for tax loss harvesting.
+                  They may explore other tax-efficient investment strategies, such as municipal bonds or tax-managed funds.
+                </li>
+              </ul>
+            </p-panel>
+            <p-panel header="Final Analysis:" class="p-2">
+              <ul>
+                <li>
+                  <b>Goal:</b>  The ultimate goal is to optimize Abdul’s taxes and potentially save money.
+                </li>
+                <li>
+                  <b>Adaptation:</b> Tax optimization is an ongoing process that will be adjusted as Abdul’s life circumstances change.
+                </li>
+                <li>
+                  <b>Commitment:</b>  : Jacob is enthusiastic about helping Abdul navigate the complexities of the tax code and create a plan that puts her in the best possible financial position.
+                </li>
+              </ul>
+            </p-panel>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 lg:col-4 xl:col-4">
+      <div class="border-round p-3">
+        <div class="grid">
+          <div class="col-12">
+            <div class="flex align-items-center">
+              <i class="pi pi-chart-line" style="font-size: 2rem;color:blueviolet"></i>
+              <span class="text-xl text-900 font-medium font-semibold ml-3 p-3">Sentiment Analysis:</span>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="surface-card shadow-2 p-5 border-1 border-50 border-round">
+              <div class="surface-section p-1">
+                <div class="grid">
+                  <div class="col-12 lg:col-12 xl:col-12">
+                    <div class="text-xl text-800 font-medium mb-5 font-semibold">Sentiments Over Time</div>
+                    <div style="width:15rem;height:15rem;margin-left:25%">
+                      <p-chart type="doughnut" [data]="chartData" [options]="chartOptions"></p-chart>
+                    </div>
+                  </div>
+                  <div class="col-12 lg:col-12 xl:col-12">
+                    <div class="text-xl text-800 font-medium mb-5 font-semibold">Sentiments By Topic</div>
+                    <ul class="list-none p-0 m-0">
+                      <li class="mb-5" *ngFor="let sentiment of customerSentimentData">
+                        <div class="flex justify-content-between align-items-center">
+                          <span class="text-900 inline-flex justify-content-between align-items-center">
+                            <span class="font-semibold text-900">{{sentiment.category}}</span>
+                          </span>
+                        </div>
+                        <div class="surface-300 w-full mt-2" style="height: 7px; border-radius: 4px;">
+                          <p-progressBar [value]="sentiment.score" color="{{sentiment.color}}"></p-progressBar>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <!--<p-table [value]="customerSentimentData" [tableStyle]="{ 'min-width': '200px' }">
+                      <ng-template pTemplate="header">
+                        <tr>
+                          <th>Category</th>
+                          <th>Score</th>
+                        </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-sentiment>
+                        <tr>
+                          <td>{{ sentiment.category }}</td>
+                          <td>
+                            <p-progressBar [value]="sentiment.score"></p-progressBar>
+                          </td>
+                        </tr>
+                      </ng-template>
+                    </p-table>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+  <div class="grid ml-6 mt-3">
+    <div class="col-12 lg:col-8 xl:col-8  border-round">
+      <p-panel header="Action Items">
+        <div class="border-round p-3">
+          <div class="flex align-items-center">
+            <i class="pi pi-check-square" style="font-size: 2rem;color:blueviolet"></i>
+            <span class="text-xl text-900 font-medium font-semibold ml-3 p-3">Action Items:</span>
+          </div>
+          <div class="surface-card shadow-2 border-1 border-50 border-round" style="background-image: linear-gradient(45deg, whitesmoke, aliceblue);">
+            <div class="surface-section p-1">
+              <ul style="list-style-type:none">
+                <li *ngFor="let todoItem of todoList" class="p-3 flex align-items-center">
+                  <span><img src="/assets/icons/checkbox-checked.svg" style="width:2em;height:2em" /></span>
+                  <span class="ml-3">{{todoItem.description}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </p-panel>
+      
+    </div>
+    <div class="col-12 lg:col-4 xl:col-4  border-round">
+      <div class="">
+        <p-panel header="Agent Performance Metrics:">
+          <div class="grid">
+            <div class="col-12">
+              <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+                <div class="flex justify-content-between mb-3">
+                  <div>
+                    <span class="block text-500 font-medium mb-3">Product Knowledge</span>
+                    <div class="text-semibold font-medium text-xl">152</div>
+                  </div>
+                  <div class="flex align-items-center justify-content-center bg-blue-100 border-round" style="width: 2.5rem; height: 2.5rem;">
+                    <i class="pi pi-exclamation-circle text-white-500 text-xl">
+                    </i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 ">
+              <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+                <div class="flex justify-content-between mb-3">
+                  <div>
+                    <span class="block text-500 font-medium mb-3">Cross selling product</span>
+                    <div class="text-semibold font-medium text-xl">$250,000</div>
+                  </div>
+                  <div class="flex align-items-center justify-content-center bg-orange-100 border-round" style="width: 2.5rem; height: 2.5rem;">
+                    <i class="pi pi-dollar text-orange-500 text-xl">
+                    </i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-12 ">
+              <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+                <div class="flex justify-content-between mb-3">
+                  <div>
+                    <span class="block text-500 font-medium mb-3">Listening skills</span>
+                    <div class="text-semibold font-medium text-xl">12</div>
+                  </div>
+                  <div class="flex align-items-center justify-content-center bg-green-100 border-round" style="width: 2.5rem; height: 2.5rem;">
+                    <i class="pi pi-clock text-white-500 text-xl">
+                    </i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-12 ">
+              <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+                <div class="flex justify-content-between mb-3">
+                  <div>
+                    <span class="block text-500 font-medium mb-3">Objections or Concerns Addressed</span>
+                    <div class="text-semibold font-medium text-xl">15</div>
+                  </div>
+                  <div class="flex align-items-center justify-content-center bg-red-100 border-round" style="width: 2.5rem; height: 2.5rem;">
+                    <i class="pi pi-question-circle text-white-500 text-xl">
+                    </i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-panel>
+      </div>
+    </div>
+  </div>
+</div>
